@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300" rel="stylesheet">
+    <title>Speech Recognition</title>
+    <link href='stylesheet.css' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="./annyang/annyang.min.js"></script>
+    <script type="text/javascript" src="./jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+    <script type="text/javascript" src="./jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="menu">
+      <div class="topsection">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/slc-logo.png" width="125" height = "70"/>
+          </a>
+        </div>
+          <ul class="topnav" id="myTopnav">
+            <li><a href="#settings">Log Out</a></li>
+            <li><a href="#settings">Account</a></li>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <section class="main">
+      <div class="speech">
+        <style>
+          .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+          .speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
+          .speech img {float: right; width: 40px }
+        </style>
+
+        <!-- Search Form -->
+        <form id="labnol" method="get" action="https://www.google.com/search">
+        <div class="speech">
+          <input type="text" name="q" id="transcript" placeholder="Speak" />
+          <img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />
+        </div>
+        </form>
+
+        <!-- HTML5 Speech Recognition API -->
+        <script>
+        function startDictation() {
+          if (annyang) {
+            console.log("Called");
+          // Let's define our first command. First the text we expect, and then the function it should call
+          var deadline = {
+          'when is the deadline': function() {
+          $("#labnol").val("Nine months after the start of the course.");
+          }
+         };
+         // Add the deadline to annyang
+         annyang.addCommands(commands);
+
+        
+          var evidence ={ 
+          'what evidence do i need': function() { 
+          $("#labnol").val("Please take with you an id card and a document with your address");
+            }
+          };
+          // Add what evidence we should take with us. 
+          annyang.addCommands(evidence);
+
+
+          var time ={ 
+          'how much time do I need to wait for response': function() { 
+          $("#labnol").val("You have 3 months to finish.");
+            }
+          };
+
+          // Add how much time answer to anny.
+          annyang.addCommands(time);
+
+           annyang.start();
+           annyang.debug();
+         
+        </script>
+      </div>
+    </section>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script>
+
+</script>
+
+    <!--***********Footer***********-->
+    <footer>
+      <div class="footer">
+        <ul class="bottom">
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Social Media</a></li>
+          <li><a href="terms">T&C</a></li>
+          <li><a href="Help">Help</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+
+</html>

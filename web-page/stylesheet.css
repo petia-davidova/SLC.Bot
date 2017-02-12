@@ -1,0 +1,195 @@
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav
+{
+  font-family: 'Work Sans', sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 20px;
+  padding-right: 40px;
+  overflow: hidden;
+  height: 60px;
+  display: inline-block;
+  float: right;
+}
+
+body
+{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 22px;
+  background-image: url("images/tree.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 800px, 800px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav
+{
+  overflow: hidden;
+  border-bottom: 2px solid #cbcbcb;
+  width: 100%;
+  display: inline-block;
+  margin-left: 0%;
+  /*background: linear-gradient(horizontal,#008e7f , #ffffff);*/
+  background: -webkit-linear-gradient(left, #008e7f , #ffffff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #008e7f, #ffffff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #008e7f, #ffffff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #008e7f , #ffffff); /* Standard syntax */
+}
+
+
+.topsection
+{
+  width: 100%;
+}
+
+/* Float the list items side by side */
+ul.topnav li
+{
+  float: right;
+  text-align: center;
+}
+
+/* Style the links inside the list items */
+ul.topnav li a
+{
+   display: inline-block;
+   color: #008e7f;
+   text-align: center;
+   padding: 14px 20px;
+   text-decoration: none;
+   transition: 0.5s;
+   font-size: 23px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover
+{
+  color: #e56100;
+  border-bottom: 10px solid #e56100;
+  font-weight: 300;
+  transition: all 0.20s linear 0s;
+  -o-transition: all 0.20s linear 0s;
+  -ms-transition: all 0.20s linear 0s;
+  -moz-transition: all 0.20s linear 0s;
+  -webkit-transition: all 0.20s linear 0s;
+  z-index: 1;
+}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon
+{
+  display: none;
+}
+
+.logo img
+{
+  position: absolute;
+  z-index: 1;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.main
+{
+  padding-top: 80px;
+  padding-bottom: 250px;
+}
+
+footer
+{
+  overflow: hidden;
+  height: 70px;
+  background: #ffffff;
+  border-top: 2px solid #cbcbcb;
+  width: 100%;
+  padding-bottom: 0;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  margin-bottom: 0;
+}
+
+ul.bottom
+{
+  font-family: 'Work Sans', sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 20px;
+  padding-right: 40px;
+  overflow: hidden;
+  height: 60px;
+  display: inline-block;
+  float: center;
+  text-align: center;
+}
+
+ul.bottom li
+{
+  display: inline-block;
+  float: left;
+  /*text-align: center;*/
+}
+
+ul.bottom li a
+{
+  /*display: inline-block;*/
+  color: #008e7f;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 18px;
+}
+
+
+ul.bottom li a:hover
+{
+  color: #e56100;
+  border-top: 10px solid #e56100;
+  font-weight: 300;
+  transition: all 0.20s linear 0s;
+  -o-transition: all 0.20s linear 0s;
+  -ms-transition: all 0.20s linear 0s;
+  -moz-transition: all 0.20s linear 0s;
+  -webkit-transition: all 0.20s linear 0s;
+  z-index: 1;
+}
+
+.buttons
+{
+  padding-top: 30px;
+}
+
+.achiv ul li p
+{
+  margin: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.buttons-table table
+{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons-table table tr td
+{
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.buttons-table table tr td img
+{
+  border-radius: 60px;
+  width: 150px;
+  height: 150px;
+}
